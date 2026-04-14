@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerMovment : MonoBehaviour
 {
     public float speed = 5f;
-    public float jumpForce = 5f; // تعريف قوة القفز
+    public float jumpForce =0.3f; // تعريف قوة القفز
     private Rigidbody rb;        // تعريف متغير الفيزياء
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

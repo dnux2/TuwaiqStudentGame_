@@ -361,7 +361,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovment
   speed: 5
+<<<<<<< HEAD
   jumpForce: 5
+=======
+  jumpForce: 2
+>>>>>>> 9c6ad8315a597dae8df25221e20968ef60142faf
 --- !u!136 &1094270389
 CapsuleCollider:
   m_ObjectHideFlags: 0

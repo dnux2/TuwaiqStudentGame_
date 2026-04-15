@@ -2,50 +2,20 @@ using UnityEngine;
 
 public class TreeEnemy : MonoBehaviour
 {
-    public float moveDistance = 2f;
-    public float speed = 6f;
-    public float waitTime = 2f;
-
-    private Vector3 startPos;
-    private Vector3 targetPos;
-    private bool isMoving = false;
+    public float attackForce = 20f;
+    private Rigidbody rb;
 
     void Start()
     {
-        startPos = transform.position;
-        targetPos = startPos + Vector3.right * moveDistance;
-
-        InvokeRepeating(nameof(TriggerMove), waitTime, waitTime);
+        rb = GetComponent<Rigidbody>();
     }
 
-    void TriggerMove()
+    void OnTriggerEnter(Collider other)
     {
-        isMoving = true;
-    }
-
-    void Update()
-    {
-        if (isMoving)
+        if (other.CompareTag("Player"))
         {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                targetPos,
-                speed * Time.deltaTime
-            );
-
-            if (Vector3.Distance(transform.position, targetPos) < 0.1f)
-            {
-                transform.position = startPos;
-                isMoving = false;
-            }
-        }
-    }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Dead");
+            Vector3 direction = (other.transform.position - transform.position).normalized;
+            rb.AddForce(direction * attackForce, ForceMode.Impulse);
         }
     }
 }

@@ -662,10 +662,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5236476035952871350, guid: 55ae7a49255464045b757d4c4a988ffa, type: 3}
-      propertyPath: player
-      value: 
-      objectReference: {fileID: 998989897}
     - target: {fileID: 5315334405723731194, guid: 55ae7a49255464045b757d4c4a988ffa, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -680,9 +676,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 697614246707295392, guid: 55ae7a49255464045b757d4c4a988ffa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1804819433}
-    - targetCorrespondingSourceObject: {fileID: 697614246707295392, guid: 55ae7a49255464045b757d4c4a988ffa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1804819437}
   m_SourcePrefab: {fileID: 100100000, guid: 55ae7a49255464045b757d4c4a988ffa, type: 3}
 --- !u!1 &1804819432 stripped
 GameObject:
@@ -701,19 +694,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33bb94cb325536044829445d2bc9cd29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooter
---- !u!114 &1804819437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1804819432}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4b83b2434300924fa9ffc9b05dc8ee7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GunTrigger
-  theGun: {fileID: 1695786287}
+  bulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
+  Player: {fileID: 0}
+  bulletSpeed: 10
+  shootInterval: 2
 --- !u!1001 &1945438972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -925,7 +910,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2064377367}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 80220f4ecadb24442ba37238fa97ea4e, type: 3}
   m_Name: 

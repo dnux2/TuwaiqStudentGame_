@@ -1,9 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovment : MonoBehaviour
 {
     public float speed = 5f;
-    public float jumpForce =0.3f; // تعريف قوة القفز
+    public float jumpForce =7f; // تعريف قوة القفز
     private Rigidbody rb;        // تعريف متغير الفيزياء
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -35,5 +36,18 @@ public class PlayerMovment : MonoBehaviour
         }
     
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+         if (other.gameObject.CompareTag("Bullet"))
+         {
+            Destroy(other.gameObject);
+             Debug.Log("اللاعب انضرب!");
+            Die();
+         }
+    }
+    void Die()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
     }
 }

@@ -1,36 +1,61 @@
 using UnityEngine;
-using UnityEngine.SceneMangement;
-public class TreeMovement : MonoBehaviour
-{
-    public float riseHeight = 5f;
-    public float riseSpeed = 15f;
-    private Vector3 startPos;
-    private Vector3 targetPos;
-    private bool isActivated = false;
+using System.Collections;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+public class TreeTrap : MonoBehaviour
+{
+    public float upSpeed = 20f;
+    public float delayBeforeFall = 0.2f;
+
+    private Rigidbody rb;
+    private bool isActivated = false;
+    private Vector3 startPos;
+
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         startPos = transform.position;
-        targetPos = startPos + Vector3.up;
 
+        rb.constraints = RigidbodyConstraints.FreezePositionX |
+                         RigidbodyConstraints.FreezePositionZ |
+                         RigidbodyConstraints.FreezeRotation;
     }
-    void OnTraiggerEnter(Collider other)
+
+    void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player") && !isActivated)
         {
             isActivated = true;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }    
+            StartCoroutine(TrapRoutine());
+        }
     }
-    // Update is called once per frame
-    void Update()
+
+    IEnumerator TrapRoutine()
     {
-        if (isActivated)
+        // Move up fast
+        rb.useGravity = false;
+        rb.linearVelocity = Vector3.zero;
+        rb.linearVelocity = Vector3.up * upSpeed;
+
+        yield return new WaitForSeconds(delayBeforeFall);
+
+        // Fall down
+        rb.useGravity = true;
+
+        // Wait until back near start position
+        yield return new WaitUntil(() =>
+            Mathf.Abs(transform.position.y - startPos.y) < 0.1f);
+
+        rb.linearVelocity = Vector3.zero;
+        transform.position = startPos;
+
+        isActivated = false;
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
         {
-            transform.position = Vector3.MoveTowards(
-                transform.position,
-                targetPos, riseSpeed * Time.deltaTime);
+            Destroy(collision.gameObject);
         }
     }
 }

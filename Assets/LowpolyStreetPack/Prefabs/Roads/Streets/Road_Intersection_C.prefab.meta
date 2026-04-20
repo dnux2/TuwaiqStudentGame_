@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d4b57445743a744f8be3d51efcad7c0d
+labels:
+- road
+- tile
+- set
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Streets/Road_Intersection_C.prefab
+  uploadId: 127808

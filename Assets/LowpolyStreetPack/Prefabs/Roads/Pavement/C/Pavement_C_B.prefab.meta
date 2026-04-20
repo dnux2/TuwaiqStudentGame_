@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8bf43cd68f6fc435a94360982ba72721
+labels:
+- set
+- tile
+- pavement
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Pavement/C/Pavement_C_B.prefab
+  uploadId: 127808

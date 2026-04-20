@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 7073723ba0b4746fcb03b5b5350adf3b
+labels:
+- bench
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/Bench/Bench_C.prefab
+  uploadId: 127808

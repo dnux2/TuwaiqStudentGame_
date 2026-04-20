@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: df5ca9eac644243e9bac9c43470488e0
+labels:
+- tree
+- nature
+- foliage
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Foliage/Trees_Big/Bush_D.prefab
+  uploadId: 127808

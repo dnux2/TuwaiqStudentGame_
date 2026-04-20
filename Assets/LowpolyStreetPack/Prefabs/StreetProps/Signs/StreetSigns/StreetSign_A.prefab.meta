@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: bff3b8dd4219e4fea91f659c61a2f24b
+labels:
+- sign
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/Signs/StreetSigns/StreetSign_A.prefab
+  uploadId: 127808

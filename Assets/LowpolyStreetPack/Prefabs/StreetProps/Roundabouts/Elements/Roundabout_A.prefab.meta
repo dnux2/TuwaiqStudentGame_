@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 39ac5b6da0c00402da994e3851b809dc
+labels:
+- roundabout
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/Roundabouts/Elements/Roundabout_A.prefab
+  uploadId: 127808

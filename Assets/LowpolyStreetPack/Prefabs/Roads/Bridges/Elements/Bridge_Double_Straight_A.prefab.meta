@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 835bfc5fc688d4e379f87cf48c38c7ca
+labels:
+- bridge
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Bridges/Elements/Bridge_Double_Straight_A.prefab
+  uploadId: 127808

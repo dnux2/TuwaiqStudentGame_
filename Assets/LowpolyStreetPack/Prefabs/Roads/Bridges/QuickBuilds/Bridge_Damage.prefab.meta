@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: 92eacb4d2bbd44e539b48e5fa76d70d1
+labels:
+- bridge
+- set
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Bridges/QuickBuilds/Bridge_Damage.prefab
+  uploadId: 127808

@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: f39b4460411d2442b8b719674f91ce6b
+labels:
+- bridge
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Bridges/Elements/Bridge_ToStreet_Double.prefab
+  uploadId: 127808

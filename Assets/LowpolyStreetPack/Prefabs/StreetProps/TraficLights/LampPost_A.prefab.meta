@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 49f294dc276ce4ad39b5752839d24005
+labels:
+- lamp
+- light
+- trafic
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/TraficLights/LampPost_A.prefab
+  uploadId: 127808

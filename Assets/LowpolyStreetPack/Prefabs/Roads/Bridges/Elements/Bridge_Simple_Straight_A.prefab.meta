@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: b238c5ea7e48c461a8691d3198329e4a
+labels:
+- bridge
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Bridges/Elements/Bridge_Simple_Straight_A.prefab
+  uploadId: 127808

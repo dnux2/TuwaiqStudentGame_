@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d0d4623ae2b0f44f190d2f411ca1ccd9
+labels:
+- bridge
+- set
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Bridges/QuickBuilds/Bridge_Simple_Curved.prefab
+  uploadId: 127808

@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 498c83f1d21c347e7a89292b574859b1
+labels:
+- road
+- tile
+- set
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Streets/Road_Streight_C.prefab
+  uploadId: 127808

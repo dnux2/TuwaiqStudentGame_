@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 4dedbccb714a641e5a74b4f57d16356b
+labels:
+- road
+- tile
+- set
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Streets/Road_Crosswalk_Double.prefab
+  uploadId: 127808

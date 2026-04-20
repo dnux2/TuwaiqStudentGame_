@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: e21e28750080b401798f3514d8efdfde
+labels:
+- pole
+- power
+- electric
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/Powerpoles/Powerpole_A_B.prefab
+  uploadId: 127808

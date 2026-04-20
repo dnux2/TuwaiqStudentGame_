@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 463df30887c664f5c98b1eaef73dde13
+labels:
+- parking
+- set
+- tile
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Parking/Elements/Parking_Enterence_B.prefab
+  uploadId: 127808

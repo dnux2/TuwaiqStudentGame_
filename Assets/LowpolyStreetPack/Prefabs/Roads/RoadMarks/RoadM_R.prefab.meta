@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 8ee7b21ba93634fc18066421aca9fb4c
+labels:
+- set
+- marking
+- road
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/RoadMarks/RoadM_R.prefab
+  uploadId: 127808

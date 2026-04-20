@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 00fbcb4fa6ca34913aa7e905b42d77e0
+labels:
+- tile
+- set
+- park
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/Roads/Parks/Elements/Park_Sidewalk_Siple.prefab
+  uploadId: 127808

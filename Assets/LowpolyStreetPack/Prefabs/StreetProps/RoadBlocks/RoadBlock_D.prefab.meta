@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: a15f2e6fa158a40dab54eae01dda0bf0
+labels:
+- roadblock
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/RoadBlocks/RoadBlock_D.prefab
+  uploadId: 127808

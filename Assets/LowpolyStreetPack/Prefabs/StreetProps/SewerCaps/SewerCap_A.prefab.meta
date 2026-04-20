@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: b56db2f5a1caa42b190b7f3d09de3157
+labels:
+- sewer
+- cap
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 67475
+  packageName: Low Poly Street Pack
+  packageVersion: 1.0
+  assetPath: Assets/LowpolyStreetPack/Prefabs/StreetProps/SewerCaps/SewerCap_A.prefab
+  uploadId: 127808

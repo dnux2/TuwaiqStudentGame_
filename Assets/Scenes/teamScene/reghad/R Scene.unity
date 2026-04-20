@@ -3595,7 +3595,7 @@ Transform:
   m_GameObject: {fileID: 863565872}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.96, y: 0, z: -13.11}
+  m_LocalPosition: {x: -8.4, y: 0, z: -10.58}
   m_LocalScale: {x: 13.486148, y: 1.7152001, z: 19.234411}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4538,7 +4538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovment
   speed: 5
   jumpForce: 7
-  cam: {fileID: 622172729}
+  cam: {fileID: 0}
 --- !u!1001 &1115014425
 PrefabInstance:
   m_ObjectHideFlags: 0

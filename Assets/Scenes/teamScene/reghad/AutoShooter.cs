@@ -41,7 +41,7 @@ public class AutoShooter : MonoBehaviour
             rb.linearVelocity = firePoint.forward * bulletSpeed;
         }
 
-        // تدميرها بعد 4 ثواني عشان ما تعبي المشهد
-        Destroy(bullet, 10f);
+        // تدميرها بعد 12 ثواني عشان ما تعبي المشهد
+        Destroy(bullet, 7f);
     }
 }

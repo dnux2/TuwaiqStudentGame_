@@ -6570,6 +6570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walking
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: a7fd0b62dba460f4989dd188e068551d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1092408308860062549, guid: a7fd0b62dba460f4989dd188e068551d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 20.41869

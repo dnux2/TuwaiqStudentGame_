@@ -7,8 +7,8 @@ public class PlayerMovment : MonoBehaviour
     public float speed = 5f;
     public float jumpForce = 7f;
     public Transform cam;
-    private Rigidbody rb;
-    private playDeath deathScript; // ربط مع سكريبت الموت
+    public Rigidbody rb;
+    public playDeath deathScript; // ربط مع سكريبت الموت
 
     void Start()
     {
@@ -16,6 +16,9 @@ public class PlayerMovment : MonoBehaviour
         deathScript = GetComponent<playDeath>();
     }
 
+    private bool isWalking = false;
+    
+        
     void Update()
     {
         // كود المشي والقفز حقك (بدون تغيير)
@@ -25,9 +28,21 @@ public class PlayerMovment : MonoBehaviour
         move.y = 0;
         if (move != Vector3.zero) {
             transform.Translate(move.normalized * Time.deltaTime * speed, Space.World);
-            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 5f);
         }
+        
+        float mouseX = Input.GetAxis("Mouse X");
+        transform.eulerAngles += new Vector3(0, mouseX, 0);
+        
+        float mouseY = Input.GetAxis("Mouse Y");
+        cam.eulerAngles -= new Vector3(mouseY, 0, 0);
+        
+        
         if (Input.GetKeyDown(KeyCode.Space)) rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        
+        
+        // Check for qnimqtion
+        isWalking = (moveX != 0 || moveZ != 0);
+        animator.SetBool("isWaking", isWalking);
     }
 
     private void OnTriggerEnter(Collider other)

@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class FlagRise : MonoBehaviour
 {
-    public Transform flag;        
-    public float riseHeight = 3f; 
-    public float speed = 2f;      
+    public Transform flag;        // �����
+    public float riseHeight = 3f; // �� �����
+    public float speed = 2f;      // ���� ��������
 
     private Vector3 startPos;
     private Vector3 targetPos;
@@ -25,15 +25,15 @@ public class FlagRise : MonoBehaviour
         }
     }
 
+    bool oneTime = true;
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")) // ��� ������ ����
         {
             shouldRise = true;
-
-            // 🔥 هذا أهم سطر
-            if (GameManager.Instance != null)
+            if (oneTime)
             {
+                oneTime = false;
                 GameManager.Instance.SetCheckpoint(transform);
             }
         }

@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovment : MonoBehaviour
 {
+    public Animator animator;
+
     public float speed = 5f;
     public float jumpForce = 7f;
     public Transform cam;

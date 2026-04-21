@@ -25,6 +25,7 @@ public class playDeath : MonoBehaviour
 
         if (type == "Bullet")
         {
+            Die();
             StartCoroutine(DeathSequence(bulletSound));
         }
         else if (type == "Palm")
@@ -57,6 +58,7 @@ public class playDeath : MonoBehaviour
         if (GameManager.Instance != null)
         {
             GameManager.Instance.RespawnPlayer();
+            GetComponent<PlayerMovment>().enabled = true;
         }
         else
         {

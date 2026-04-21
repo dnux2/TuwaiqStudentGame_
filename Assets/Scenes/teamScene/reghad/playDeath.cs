@@ -1,3 +1,4 @@
+//play death script
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -25,11 +26,11 @@ public class playDeath : MonoBehaviour
 
         if (type == "Bullet")
         {
-            StartCoroutine(DeathSequence(bulletSound));
+           // StartCoroutine(DeathSequence(bulletSound));
         }
         else if (type == "Palm")
         {
-            StartCoroutine(DeathSequence(palmSound));
+           // StartCoroutine(DeathSequence(palmSound));
         }
     }
 

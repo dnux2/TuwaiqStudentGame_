@@ -4,14 +4,14 @@ using System.Collections;
 
 public class playDeath : MonoBehaviour
 {
-    public AudioClip startSound;  // صوت "بدينا"
-    public AudioClip bulletSound; // صوت الرصاصة
-    public AudioClip palmSound;   // صوت النخلة
+    public AudioClip startSound;  
+    public AudioClip bulletSound; 
+    public AudioClip palmSound;   
+
     private bool isDead = false;
 
     void Start()
     {
-        // تشغيل صوت "بدينا" فور بداية اللعبة
         if (startSound != null)
         {
             AudioSource.PlayClipAtPoint(startSound, transform.position);
@@ -35,20 +35,33 @@ public class playDeath : MonoBehaviour
 
     IEnumerator DeathSequence(AudioClip clip)
     {
-        // 1. تشغيل صوت الموت المحدد
+        // 1. تشغيل الصوت
         if (clip != null)
         {
             AudioSource.PlayClipAtPoint(clip, transform.position);
         }
 
-        // 2. تعطيل حركة اللاعب (سكريبت الموفمنت)
+        // 2. تعطيل الحركة
         var movment = GetComponent<PlayerMovment>();
         if (movment != null) movment.enabled = false;
 
-        // 3. انتظر 3 ثواني عشان نسمع الصوت
+        // 3. انتظار
         yield return new WaitForSeconds(3.0f);
 
-        // 4. إعادة تشغيل اللعبة
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        // 4. استدعاء نظام الموت (بدل إعادة تحميل مباشرة)
+        Die();
+    }
+
+    void Die()
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.RespawnPlayer();
+        }
+        else
+        {
+            Debug.LogWarning("مدير اللعبة مفقود! جارٍ إعادة تحميل المشهد.");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 }

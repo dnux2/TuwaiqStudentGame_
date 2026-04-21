@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class CamelMove : MonoBehaviour
+public class CarMove : MonoBehaviour
 {
     public float speed = 5f;
-    public bool move = false;
+    private bool move = false;
 
     void Update()
     {
@@ -13,8 +13,12 @@ public class CamelMove : MonoBehaviour
         }
     }
 
-    public void StartMoving()
+    void OnTriggerEnter(Collider other)
     {
-        move = true;
+        if (other.CompareTag("Player"))
+        {
+            move = true;
+        }
     }
+
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class plm : MonoBehaviour
 {
-    public Animatore an;
+   // public Animatore an;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

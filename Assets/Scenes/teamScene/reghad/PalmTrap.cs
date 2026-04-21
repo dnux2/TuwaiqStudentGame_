@@ -22,6 +22,7 @@ public class PalmTrap : MonoBehaviour
         if (isTriggered)
         {
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
+            
         }
     }
 

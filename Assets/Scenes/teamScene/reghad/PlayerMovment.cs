@@ -1,57 +1,43 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerMovment : MonoBehaviour
 {
     public float speed = 5f;
     public float jumpForce = 7f;
-
+    public Transform cam;
     private Rigidbody rb;
+    private playDeath deathScript; // ربط مع سكريبت الموت
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        deathScript = GetComponent<playDeath>();
     }
 
     void Update()
     {
+        // كود المشي والقفز حقك (بدون تغيير)
         float moveX = Input.GetAxis("Horizontal");
         float moveZ = Input.GetAxis("Vertical");
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        Vector3 move = (cam.forward * moveZ + cam.right * moveX);
+        move.y = 0;
+        if (move != Vector3.zero) {
+            transform.Translate(move.normalized * Time.deltaTime * speed, Space.World);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.LookRotation(move), Time.deltaTime * 5f);
         }
-
-        Vector3 move = new Vector3(moveX, 0, moveZ);
-        transform.Translate(Vector3.forward * move.magnitude * speed * Time.deltaTime);
-
-        if (move != Vector3.zero)
-        {
-            transform.forward = move;
-        }
+        if (Input.GetKeyDown(KeyCode.Space)) rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet"))
         {
             Destroy(other.gameObject);
-            Debug.Log("اللاعب انضرب!");
-            Die();
+            if (deathScript != null) deathScript.HandleDeath("Bullet");
         }
-    }
-
-    void Die()
-    {
-        if (GameManager.Instance != null)
+        else if (other.gameObject.CompareTag("Enemy")) // تأكدي تاغ النخلة Enemy
         {
-            GameManager.Instance.RespawnPlayer();
-        }
-        else
-        {
-            Debug.LogWarning("GameManager missing! Reloading scene.");
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (deathScript != null) deathScript.HandleDeath("Palm");
         }
     }
 }

@@ -3,7 +3,12 @@ guid: 5b37c2b95d982124e919627a4e7c10f5
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: CamelMat
+    second: {fileID: 2100000, guid: 00b8953a62105402f8e97288840520b6, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

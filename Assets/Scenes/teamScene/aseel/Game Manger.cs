@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//Game manger Script
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +18,16 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        // تأكد ما فيه أكثر من GameManager
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+            return;
+        }
     }
 
     void Update()
@@ -27,6 +38,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    // استدعاء عند لمس الفلاق
     public void SetCheckpoint(Transform checkpoint)
     {
         lastCheckpoint = checkpoint;
@@ -35,7 +47,18 @@ public class GameManager : MonoBehaviour
 
     public void RespawnPlayer()
     {
-        if (player == null || lastCheckpoint == null) return;
+        if (player == null)
+        {
+            Debug.LogWarning("Player مفقود!");
+            return;
+        }
+
+        if (lastCheckpoint == null)
+        {
+            Debug.LogWarning("ما فيه Checkpoint! إعادة تحميل المشهد...");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            return;
+        }
 
         Vector3 spawnPos = lastCheckpoint.position + Vector3.up * 1.5f;
 
@@ -53,6 +76,13 @@ public class GameManager : MonoBehaviour
         else
         {
             player.transform.position = spawnPos;
+        }
+
+        // 🔥 رجّع سكربت الحركة
+        var movement = player.GetComponent<PlayerMovment>();
+        if (movement != null)
+        {
+            movement.enabled = true;
         }
 
         Debug.Log("RESPAWN AT: " + lastCheckpoint.name);

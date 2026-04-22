@@ -53,12 +53,18 @@ public class playDeath : MonoBehaviour
         Die();
     }
 
+    public Animator animator;
+
     void Die()
     {
         if (GameManager.Instance != null)
         {
             GameManager.Instance.RespawnPlayer();
             GetComponent<PlayerMovment>().enabled = true;
+            animator.SetBool("isDie", false);
+            isDead = false;
+
+
         }
         else
         {

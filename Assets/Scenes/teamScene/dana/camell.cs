@@ -1,5 +1,5 @@
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CarMove : MonoBehaviour
 {
     public float speed = 5f;
@@ -17,10 +17,13 @@ public class CarMove : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            move = true;
+            move = true; 
+            SceneManager.LoadScene("Game");
+
         }
     }
 
+   
 }
 /*
    using UnityEngine;

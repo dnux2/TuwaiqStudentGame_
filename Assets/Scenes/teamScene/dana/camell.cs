@@ -18,7 +18,7 @@ public class CarMove : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             move = true; 
-            SceneManager.LoadScene("Game");
+            //SceneManager.LoadScene("Game");
 
         }
     }
@@ -41,7 +41,7 @@ public class CarMove : MonoBehaviour
        }
    }
 
-   // íÈÏÃ ÇáÍÑßÉ áãÇ íÏÎá ÇááÇÚÈ ÇáÊÑíŞÑ
+   // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    void OnTriggerEnter(Collider other)
    {
        if (other.CompareTag("Player"))
@@ -50,7 +50,7 @@ public class CarMove : MonoBehaviour
        }
    }
 
-   // åäÇ íÕÏã ÇááÇÚÈ
+   // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    void OnCollisionEnter(Collision collision)
    {
        if (collision.gameObject.CompareTag("Player"))

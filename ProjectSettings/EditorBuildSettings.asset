@@ -8,5 +8,11 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/teamScene/reghad/R Scene.unity
     guid: d1cdd3502587dac4da70a3b44aa12305
+  - enabled: 1
+    path: Assets/Scenes/teamScene/shoog/Scene/Mnue.unity
+    guid: c981ef7b395754eea85f49fcdf76a2be
+  - enabled: 1
+    path: Assets/Scenes/teamScene/shoog/Scene/Game1.unity
+    guid: 28d00ff0996f942e390549aab1095f5f
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

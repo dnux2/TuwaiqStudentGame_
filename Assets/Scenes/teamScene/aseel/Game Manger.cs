@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -87,4 +88,9 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("RESPAWN AT: " + lastCheckpoint.name);
     }
+    public void StopTimer()
+    {
+         gameFinished = true;
+         Debug.Log("التايمر وقف عند: " + timer);
+         }
 }

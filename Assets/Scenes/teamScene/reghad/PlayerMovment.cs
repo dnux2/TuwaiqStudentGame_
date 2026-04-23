@@ -13,7 +13,7 @@ public class PlayerMovment : MonoBehaviour
 
     private bool isWalking = false;
     private bool isPlayingWalkSound = false;
-    private bool isDead = false;
+    public bool isDead = false;
 //// أول شيء: تأكد ما نستدعي الموت مرتين
 // if (isDie) return;
 // 

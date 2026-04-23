@@ -1,6 +1,7 @@
 ﻿//Game manger Script
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -88,9 +89,13 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("RESPAWN AT: " + lastCheckpoint.name);
     }
+    public TMP_Text timerText;
+    public GameObject winPanel;
     public void StopTimer()
     {
          gameFinished = true;
          Debug.Log("التايمر وقف عند: " + timer);
-         }
-}
+         timerText.text = timer.ToString("F2") + "s";
+         winPanel.SetActive(true);
+    
+}}

@@ -7,15 +7,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [Header("Player")]
-    public GameObject player;
+    [Header("Player")] public GameObject player;
 
-    [Header("Timer")]
-    public float timer;
+    [Header("Timer")] public float timer;
     private bool gameFinished = false;
 
-    [Header("Checkpoint")]
-    public Transform lastCheckpoint;
+    [Header("Checkpoint")] public Transform lastCheckpoint;
 
     void Awake()
     {
@@ -89,13 +86,22 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("RESPAWN AT: " + lastCheckpoint.name);
     }
+
     public TMP_Text timerText;
     public GameObject winPanel;
+
     public void StopTimer()
     {
-         gameFinished = true;
-         Debug.Log("التايمر وقف عند: " + timer);
-         timerText.text = timer.ToString("F2") + "s";
-         winPanel.SetActive(true);
-    
-}}
+        gameFinished = true;
+        Debug.Log("التايمر وقف عند: " + timer);
+        timerText.text = timer.ToString("F2") + "s";
+        winPanel.SetActive(true);
+
+    }
+
+    public void M()
+    {
+        SceneManager.LoadScene("Mnue");
+
+    }
+}

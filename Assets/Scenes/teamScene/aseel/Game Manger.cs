@@ -101,8 +101,8 @@ public class GameManager : MonoBehaviour
 
     public void M()
     {
-       // SceneManager.LoadScene("Mnue");
-       Debug.Log("Exit");
-       Application.Quit();
+       SceneManager.LoadScene("Mnue");
+       //Debug.Log("Exit");
+       //Application.Quit();
     }
 }
